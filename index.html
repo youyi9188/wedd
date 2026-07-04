@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; -webkit-text-stroke: #000000; background-color: #ffffff}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Courier New'; -webkit-text-stroke: #000000; background-color: #ffffff; min-height: 16.0px}
+    span.s1 {font-kerning: none}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"># The user wants me to generate an image or code that perfectly matches the visual layout shown in S__39321619_0_2.jpg.</span></p>
+<p class="p1"><span class="s1"># Wait, the user wants me to generate the website to look *exactly* like the visual structure of S__39321619_0_2.jpg instead of a card below the photo.</span></p>
+<p class="p1"><span class="s1"># In S__39321619_0_2.jpg, the layout is:</span></p>
+<p class="p1"><span class="s1"># Light background sky image at the bottom, texts at the top overlaying a clean white/soft background gradient, QR code in the middle.</span></p>
+<p class="p1"><span class="s1"># Let's create an elegant, single-page CSS layout where the entire card is a single beautiful column that looks exactly like S__39321619_0_2.jpg,</span></p>
+<p class="p1"><span class="s1"># with the photo at the bottom, title at the top, and QR code in the middle.</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">final_html = """&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="zh-TW"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;育柏 &amp; 逸茜 婚禮邀請&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 0;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f4ece1;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #5a4b41;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>justify-content: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>min-height: 100vh;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.card-container {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 450px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 10px 30px rgba(0,0,0,0.05);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>align-items: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>position: relative;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.top-content {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 50px 20px 20px 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>text-align: center;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background: linear-gradient(to bottom, #fdfbfa 0%, #ffffff 100%);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.the-wedding-of {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-style: italic;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Georgia', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #9c8c81;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 1px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.main-names {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 36px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-weight: 500;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 6px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #55463c;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.invitation-line {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #8c7662;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 3px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 12px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.wedding-date {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 16px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: 'Georgia', serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #7a6e67;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 35px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.form-title {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 4px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #8c7662;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.qrcode-wrapper {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #ffffff;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 15px rgba(0,0,0,0.04);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: inline-block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 25px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #f2ede9;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.qrcode-image {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 180px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: 180px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.heart-icon {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 14px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #8c7662;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 15px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.closing-text {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-size: 13px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: #7a6e67;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>letter-spacing: 2px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>line-height: 2;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 30px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>.bottom-photo {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>width: 100%;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: block;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>height: auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;div class="card-container"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- 上半部文字與 QR Code 區塊 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div class="top-content"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="the-wedding-of"&gt;The Wedding of&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="main-names"&gt;育柏 &amp; 逸茜&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="invitation-line"&gt;— 誠摯邀請您參加我們的婚禮 —&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="wedding-date"&gt;2026 . 11 . 14&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="form-title"&gt;婚禮出席回覆表單&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;!-- 內嵌 QR Code 圖片 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="qrcode-wrapper"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>&lt;img class="qrcode-image" src="S__39305235_2.jpg" alt="RSVP QR Code"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="heart-icon"&gt;♥&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">            </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;div class="closing-text"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>期待與您一同見證我們的重要時刻&lt;br&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>感謝您的祝福與蒞臨</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- 下半部滿版婚紗照 (直接貼齊底部) --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;img class="bottom-photo" src="LINE_ALBUM_💐電子喜帖照片_260703_1_2.jpg" alt="育柏 &amp; 逸茜 婚紗照"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;"""</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1">with open("index.html", "w", encoding="utf-8") as f:</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>f.write(final_html)</span></p>
+<p class="p1"><span class="s1">print("Perfectly matched index.html has been generated.")</span></p>
+</body>
+</html>
